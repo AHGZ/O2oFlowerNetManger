@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="#FFFFFF"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/sort_management_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#FF9600"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sort_management_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="热饮"
+            android:textColor="#353535"
+            android:textSize="15sp"
+            android:layout_marginLeft="13dp"/>
+
+        <TextView
+            android:id="@+id/sort_management_shopnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="7dp"
+            android:text="菜品数：10"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            android:layout_marginLeft="13dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sort_management_rank"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sort_management_item_compile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/shopunit_icon_compile" />
+
+        <View
+            android:id="@+id/sort_management_item_halvingline"
+            android:layout_width="1dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:background="#E4E4E4" />
+
+        <ImageView
+            android:id="@+id/sort_management_item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/shopunit_icon_delete" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RadioGroup
+        android:id="@+id/dispatching_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:button="@null"
+            android:drawableRight="@drawable/selector_dispatching"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="蜂鸟配送"
+            android:textColor="#494949" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:button="@null"
+            android:drawableRight="@drawable/selector_dispatching"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="商家配送"
+            android:textColor="#494949" />
+    </RadioGroup>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="到店自提"
+            android:textColor="#494949"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/dispatching_to_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/selector_dispatching"
+            android:button="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="起送金额："
+            android:textColor="#494949"
+            android:textSize="15sp" />
+
+        <com.huafan.huafano2omanger.view.customer.CustomEditText
+            android:id="@+id/ed_qisong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:hint="点击输入起送金额"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:textColorHint="#A2A2A2"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="备餐时间："
+            android:textColor="#494949"
+            android:textSize="15sp" />
+
+        <com.huafan.huafano2omanger.view.customer.CustomEditText
+            android:id="@+id/ed_beican"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="分"
+            android:maxLength="2"
+            android:inputType="number"
+            android:textColorHint="#A2A2A2"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dispatching_sava_button"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="64dp"
+        android:background="#FF1E00"
+        android:text="保存"
+        android:textColor="#FFFEFB"
+        android:textSize="18sp" />
+</LinearLayout>

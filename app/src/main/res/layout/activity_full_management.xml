@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/full_management_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/full_management_add"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="120dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/fl_button_selector"
+            android:backgroundTint="#FF1E00"
+            android:src="@drawable/icon_add_to"
+            app:rippleColor="#e8e8e8" />
+    </FrameLayout>
+
+</LinearLayout>

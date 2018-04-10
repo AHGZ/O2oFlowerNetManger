@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RadioGroup
+        android:id="@+id/orderReceiving_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_invoice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_order_receiving_radiobutton"
+            android:drawablePadding="10dp"
+            android:paddingLeft="15dp"
+            android:text="支持发票"
+            android:textColor="#494949" />
+
+
+        <RadioButton
+            android:id="@+id/rb_no_invoice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_order_receiving_radiobutton"
+            android:drawablePadding="10dp"
+            android:paddingLeft="15dp"
+            android:text="不支持发票"
+            android:textColor="#494949" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="必填发票金额"
+            android:textColor="#4B4B4B"
+            android:textSize="15sp" />
+
+
+        <com.huafan.huafano2omanger.view.customer.CustomEditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="55dp"
+            android:background="@null"
+            android:hint="请输入发票起开金额"
+            android:textColor="#9F9F9F"
+            android:maxLength="6"
+            android:inputType="numberDecimal"
+            android:textColorHint="#9F9F9F"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/orderReceiving_sava_button"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/btn_commit_selector"
+        android:text="保存"
+        android:textColor="#FFFEFB"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_toolbar_height">48dp</dimen>
+
+    <dimen name="font_large">18sp</dimen>
+    <dimen name="font_normal">16sp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+
+    <dimen name="send_width">52dp</dimen>
+    <dimen name="index_height">56dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="unit_padding">16dp</dimen>
+    <dimen name="uniform_padding">16dp</dimen>
+    <dimen name="search_height">90dp</dimen>
+    <dimen name="coverflow_width">380dp</dimen>
+    <dimen name="img_width">41dp</dimen>
+    <dimen name="coverflow_height">300dp</dimen>
+
+
+    <dimen name="size_default_height">200dp</dimen>
+</resources>

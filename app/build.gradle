@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId "com.huafan.huafano2omanger"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            moduleName "jniLib"
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+        multiDexEnabled true
+    }
+
+    productFlavors {
+        huawei {}
+        xiaomi {}
+        qihu360 {}
+        baidu {}
+        tencent {}
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        release {
+            //代码混淆
+            minifyEnabled false
+            //zip优化
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            //代码混淆
+            minifyEnabled false
+            //zip优化
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:design:+'
+    compile 'com.android.support:appcompat-v7:+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile project(':netlib')
+    // 注解式View ID
+    compile 'com.jakewharton:butterknife:8.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    // EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+    //基于 RxJava 的图片选择器
+    compile 'com.caimuhao:rxpicker:1.1.4'
+    //图片加载框架
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // 解决超过dex方法数
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.yanzhenjie:sofia:1.0.4'
+    // 自定义滑动控件
+    compile 'com.gxz.pagerslidingtabstrip:library:1.3'
+    // 百度地图
+    compile files('libs/BaiduLBS_Android.jar')
+    // 百度云推送
+    compile files('libs/pushservice-6.1.1.21.jar')
+    // 打印库
+    compile 'am.util:printer:2.1.0'
+    // 二维码
+    compile 'com.google.zxing:core:3.3.0'
+    //浮动按钮
+    compile 'com.melnykov:floatingactionbutton:1.2.0'
+    //轮播图
+    compile 'com.youth.banner:banner:1.4.9'
+    //压缩图片
+    compile 'com.jaywei:compresstool:1.2.0'
+    //刷新框架
+    compile 'com.jwenfeng.pulltorefresh:library:1.0.3'
+    //压缩图片
+    compile 'com.ghnor:flora:1.0.0-alpha1'
+    //九宫格图片选择器
+    compile 'cn.bingoogolapple:bga-photopicker:1.2.3@aar'
+    compile 'cn.bingoogolapple:bga-adapter:1.1.5@aar'
+    compile 'com.zxy.android:tiny:0.0.6'
+    //日期选择
+    compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+}
+//EventBus3.0 Index
+apt {
+    arguments {
+        eventBusIndex "com.study.sangerzhong.studyapp.MyEventBusIndex"
+    }
+}

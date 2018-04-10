@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.huafan.huafano2omanger.view.customer.NormalTopBar
+        android:id="@+id/normal_top"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:leftImageSrc="@mipmap/icon_back_white"
+        app:top_titleTextColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#e8e8e8" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.jwenfeng.library.pulltorefresh.PullToRefreshLayout
+            android:id="@+id/pull_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="120dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/fl_button_selector"
+            android:backgroundTint="#FF1E00"
+            android:src="@drawable/icon_add_to"
+            app:rippleColor="#e8e8e8" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/titlebar"/>
+    <ImageView
+        android:id="@+id/team_examine_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/teamexamine_icon_sm"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扫码核销"
+        android:textColor="#AFAFAF"
+        android:textSize="19dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/layout_border_editextlayout"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:src="@drawable/teamexamine_icon_ewm" />
+
+        <com.huafan.huafano2omanger.view.customer.CustomEditText
+            android:id="@+id/team_examine_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
+            android:hint="请输入团购劵码"
+            android:textColorHint="#CCCCCC"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/team_examine_button"
+        android:layout_marginTop="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:text="提交"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="#FF1E00"
+        android:layout_marginRight="15dp"/>
+</LinearLayout>

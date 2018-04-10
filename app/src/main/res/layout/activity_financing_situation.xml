@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/financing_txt_today"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="昨天"
+            android:textColor="#FF1E00"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/financing_txt_sevenday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="7天内"
+            android:textColor="#494949"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/financing_txt_thirtyday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="30天内"
+            android:textColor="#494949"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/financing_txt_custom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="自定义"
+            android:textColor="#494949"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/financing_situation_relat1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/financing_gridview_item_img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:src="@drawable/financing_icon_ddze" />
+
+            <TextView
+                android:id="@+id/financing_gridview_item_text11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/financing_gridview_item_img1"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/financing_gridview_item_img1"
+                android:text="订单总额"
+                android:textColor="#444444"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/financing_gridview_item_text12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/financing_gridview_item_text11"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@+id/financing_gridview_item_img1"
+                android:text="¥ 121212.12"
+                android:textColor="#444444" />
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/financing_situation_relat2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/financing_gridview_item_img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:src="@drawable/financing_icon_dpsr" />
+
+            <TextView
+                android:id="@+id/financing_gridview_item_text21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/financing_gridview_item_img2"
+                android:layout_toEndOf="@+id/financing_gridview_item_img2"
+                android:layout_toRightOf="@+id/financing_gridview_item_img2"
+                android:text="店铺收入"
+                android:textColor="#444444"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/financing_gridview_item_text22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/financing_gridview_item_text21"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@+id/financing_gridview_item_img2"
+                android:text="¥ 121212.12"
+                android:textColor="#444444" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/financing_situation_relat3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/financing_gridview_item_img3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:src="@drawable/financing_icon_yxdd" />
+
+            <TextView
+                android:id="@+id/financing_gridview_item_text31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/financing_gridview_item_img3"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/financing_gridview_item_img3"
+                android:text="有效订单"
+                android:textColor="#444444"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/financing_gridview_item_text32"
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/financing_gridview_item_text31"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@+id/financing_gridview_item_img3"
+                android:gravity="center_horizontal"
+                android:text="12"
+                android:textColor="#444444" />
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/financing_situation_relat4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/financing_gridview_item_img4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:src="@drawable/financing_icon_wxdd" />
+
+            <TextView
+                android:id="@+id/financing_gridview_item_text41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/financing_gridview_item_img4"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/financing_gridview_item_img4"
+                android:text="无效订单"
+                android:textColor="#444444"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/financing_gridview_item_text42"
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/financing_gridview_item_text41"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@+id/financing_gridview_item_img4"
+                android:gravity="center_horizontal"
+                android:text="12"
+                android:textColor="#444444" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:paddingBottom="10dp"
+        android:text="注:已完成订单系统将在48小时内完成结算!"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</LinearLayout>

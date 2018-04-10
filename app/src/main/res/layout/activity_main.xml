@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <com.huafan.huafano2omanger.view.customer.NoScrollViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <com.huafan.huafano2omanger.view.bottombar.BottomBarLayout
+        android:id="@+id/bbl"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal">
+
+        <com.huafan.huafano2omanger.view.bottombar.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/icon_wait"
+            app:iconSelected="@drawable/icon_wait_pressed"
+            app:itemText="待处理"
+            app:itemTextSize="12sp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/colorstart"
+            app:touchDrawable="@drawable/selector_bg" />
+
+
+        <com.huafan.huafano2omanger.view.bottombar.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/icon_group"
+            app:iconSelected="@drawable/icon_group_pressed"
+            app:itemText="团购"
+            app:itemTextSize="12sp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/colorstart"
+            app:touchDrawable="@drawable/selector_bg" />
+
+
+        <com.huafan.huafano2omanger.view.bottombar.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/icon_shop"
+            app:iconSelected="@drawable/icon_shop_pressed"
+            app:itemText="门店"
+            app:itemTextSize="12sp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/colorstart"
+            app:touchDrawable="@drawable/selector_bg" />
+
+        <com.huafan.huafano2omanger.view.bottombar.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/icon_mine"
+            app:iconSelected="@drawable/icon_mine_pressed"
+            app:itemText="我的"
+            app:itemTextSize="12sp"
+            app:openTouchBg="true"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/colorstart"
+            app:touchDrawable="@drawable/selector_bg" />
+
+    </com.huafan.huafano2omanger.view.bottombar.BottomBarLayout>
+
+</LinearLayout>
